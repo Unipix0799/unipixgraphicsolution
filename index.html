@@ -59,7 +59,65 @@
 .my-float{
 	margin-top:16px;
 }
-      </style>
+
+
+.container1 {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.image-pair {
+    display: inline-block;
+    position: relative;
+    width: 360px;
+    height: 240px;
+    overflow: hidden;
+    margin: 0 10px; /* Optional: spacing between pairs */
+}
+
+.image-pair img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-image {
+    z-index: 1;
+}
+
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    width: 50%;
+}
+
+.slider-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 80%;
+    pointer-events: none;
+}
+
+.slider {
+    width: 100%;
+    pointer-events: all;
+}
+
+
+
+    </style>
 </head>
 
 <body>
@@ -765,6 +823,9 @@
         </div>
     </div>
     <!-- End Testimonials -->
+
+
+
    <!-- Start Department 
     ============================================= -->
     <div class="departments-area bg-gray default-padding bottom-less">
@@ -778,127 +839,125 @@
                 </div>
             </div>
             <div class="row">
-                <div class="department-items text-center">
+            
                     <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div id="image-comparison-slider">
-                            <img src="assets/img/uni/work/dd/R6__0260-Twlight.jpg" alt="before">
-                            <div class="img-wrapper">
-                              <img src="assets/img/uni/work/dd.jpg" alt="after">
-                            </div>
-                            <span class="label label-before">Before</span>
-                            <span class="label label-after">After</span>
-                            <div class="handle">
-                              <div class="handle-line"></div>
-                              <div class="handle-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                              </div>
-                              <div class="handle-line"></div>
-                            </div>
-                          </div><h2><b>Day to Dusk</b></h2>
-                    </div>
+                    <div class="image-pair">
+                        <div class="before-image">
+                            before
+                            
+                            <img src="assets/img/uni/work/dd/R6__0260-Twlight.jpg" alt="Before 1">
+                        </div>
+                        <div class="after-image">
+                            <img src="assets/img/uni/work/dd.jpg" alt="After 1">
+                        </div>
+                        <div class="slider-wrapper">
+                            <input type="range" class="slider" min="0" max="100" value="50">
+                            <div class="slider-line"></div>
+                        </div>
+                    </div>   <h2 style="text-align: center;"><b>Day To Dusk</b></h2>
+                </div>
+             
                     <!-- End Single Item -->
+                    
                     <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div id="image-comparison-slider2">
-                            <img src="assets/img/uni/work/staging.jpg" alt="before">
-                            <div class="img-wrapper2">
-                              <img src="assets/img/uni/work/staging/BMW09897.jpg" alt="after">
+                        <div class="image-pair">
+                            <div class="before-image">
+                            
+                                <img src="assets/img/uni/work/staging/BMW09897.jpg"  alt="Before 1">
                             </div>
-                            <span class="label label-before">Before</span>
-                            <span class="label label-after">After</span>
-                            <div class="handle2">
-                              <div class="handle2-line"></div>
-                              <div class="handle2-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                              </div>
-                              <div class="handle2-line"></div>
+                            <div class="after-image">
+                                <img src="assets/img/uni/work/staging.jpg" alt="After 1">
                             </div>
-                          </div><h2><b>Staging</b></h2>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
+                            <div class="slider-wrapper">
+                                <input type="range" class="slider" min="0" max="100" value="50">
+                                <div class="slider-line"></div>
+                            </div>
+                        </div>
+                         <h2 style="text-align: center;"><b>Staging</b></h2>
+                        </div>
+                        <!-- End Single Item -->
+
+                          <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div id="image-comparison-slider">
-                            <img src="assets/img/uni/work/hdr.jpg" alt="before">
-                            <div class="img-wrapper">
-                              <img src="assets/img/uni/work/hdr/untitled-2443.jpg" alt="after">
+                        <div class="image-pair">
+                            <div class="before-image">
+                                <img src="assets/img/uni/work/hdr/untitled-2443.jpg"  alt="Before 1">
                             </div>
-                            <span class="label label-before">Before</span>
-                            <span class="label label-after">After</span>
-                            <div class="handle">
-                              <div class="handle-line"></div>
-                              <div class="handle-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                              </div>
-                              <div class="handle-line"></div>
+                            <div class="after-image">
+                                <img src="assets/img/uni/work/hdr.jpg" alt="After 1">
                             </div>
-                          </div><h2><b>HDR</b></h2>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
+                            <div class="slider-wrapper">
+                                <input type="range" class="slider" min="0" max="100" value="50">
+                                <div class="slider-line"></div>
+                            </div>
+                        </div>
+                        <h2 style="text-align: center;"><b>HDR</b></h2>
+                        </div>
+                        <!-- End Single Item -->
+
+                                    <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div id="image-comparison-slider">
-                            <img src="assets/img/uni/work/mi3.png" alt="before">
-                            <div class="img-wrapper">
-                              <img src="assets/img/uni/work/decutler/0O8A4005.jpg" alt="after">
+                        <div class="image-pair">
+                            <div class="before-image">
+                                <img src="assets/img/uni/work/decutler/0O8A4005.jpg"   alt="Before 1">
                             </div>
-                            <span class="label label-before">Before</span>
-                            <span class="label label-after">After</span>
-                            <div class="handle">
-                              <div class="handle-line"></div>
-                              <div class="handle-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                              </div>
-                              <div class="handle-line"></div>
+                            <div class="after-image">
+                                <img src="assets/img/uni/work/mi3.png"
+                               alt="After 1">
                             </div>
-                          </div> <h2><b>Decutler</b></h2>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
+                            <div class="slider-wrapper">
+                                <input type="range" class="slider" min="0" max="100" value="50">
+                                <div class="slider-line"></div>
+                            </div>
+                        </div>
+                        <h2 style="text-align: center;"><b>Decutler</b></h2>
+                        </div>
+                        <!-- End Single Item -->
+
+                                                  <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div id="image-comparison-slider">
-                            <img src="assets/img/uni/work/mi1.png" alt="before">
-                            <div class="img-wrapper">
-                              <img src="assets/img/uni/work/mi2.png" alt="after">
+                        <div class="image-pair">
+                            <div class="before-image">
+                                <img src="assets/img/uni/work/mi2.png"    alt="Before 1">
                             </div>
-                            <span class="label label-before">Before</span>
-                            <span class="label label-after">After</span>
-                            <div class="handle">
-                              <div class="handle-line"></div>
-                              <div class="handle-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                              </div>
-                              <div class="handle-line"></div>
+                            <div class="after-image">
+                                <img src="assets/img/uni/work/mi1.png"
+                            alt="After 1">
                             </div>
-                          </div><h2><b>Floor Plan</b></h2>
-                    </div>
-                    <!-- End Single Item -->
-                    <!-- Single Item -->
+                            <div class="slider-wrapper">
+                                <input type="range" class="slider" min="0" max="100" value="50">
+                                <div class="slider-line"></div>
+                            </div>
+                        </div>
+                        <h2 style="text-align: center;"><b>Floor Plan</b></h2>
+                        </div>
+                        <!-- End Single Item -->
+
+                        
+                                                  <!-- Single Item -->
                     <div class="col-md-4 col-sm-6 equal-height">
-                        <div id="image-comparison-slider">
-                            <img src="assets/img/uni/work/twilight/DSC06817 stack image.jpg" alt="before">
-                            <div class="img-wrapper">
-                              <img src="assets/img/uni/work/twilight/1/DSC06817-twlight.jpg" alt="after">
+                        <div class="image-pair">
+                            <div class="before-image">
+                                <img src="assets/img/uni/work/twilight/1/DSC06817-twlight.jpg"  alt="Before 1">
                             </div>
-                            <span class="label label-before">Before</span>
-                            <span class="label label-after">After</span>
-                            <div class="handle">
-                              <div class="handle-line"></div>
-                              <div class="handle-circle">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-right"></i>
-                              </div>
-                              <div class="handle-line"></div>
+                            <div class="after-image">
+                                <img src="assets/img/uni/work/twilight/DSC06817 stack image.jpg"
+                            alt="After 1">
                             </div>
-                          </div><h2><b>Twilight</b></h2>
-                    </div>
-                    <!-- End Single Item -->
+                            <div class="slider-wrapper">
+                                <input type="range" class="slider" min="0" max="100" value="50">
+                                <div class="slider-line"></div>
+                            </div>
+                        </div>
+                        <h2 style="text-align: center;"><b>Twilight</b></h2>
+                        </div>
+                        <!-- End Single Item -->
+
+              
+                  
+            
 
                     
 
@@ -1115,6 +1174,20 @@
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.slider').forEach(slider => {
+    slider.addEventListener('input', function(e) {
+        const value = e.target.value;
+        const imagePair = e.target.closest('.image-pair');
+        const afterImage = imagePair.querySelector('.after-image');
+        const sliderLine = imagePair.querySelector('.slider-line');
+        
+        afterImage.style.width = value + '%';
+        sliderLine.style.left = value + '%';
+    });
+});
 
+    </script>
 </body>
 </html>
